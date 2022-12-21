@@ -2,6 +2,7 @@ const publicLinks = {
     Login: '/login',
     Registration: '/register',
     Landing: '/',
+    Error: '*',
 };
 
 const privateLinks = {

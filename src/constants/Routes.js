@@ -6,6 +6,7 @@ import RequireAuth from "../components/RequireAuth";
 import PersistLogin from "../components/PersistLogin";
 
 const Landing = React.lazy(() => import("../layouts/Landing/Landing"));
+const Error = React.lazy(() => import("../pages/PageNotFound"))
 
 function BaseRouter() {
     return (
@@ -13,6 +14,7 @@ function BaseRouter() {
             <Suspense fallback={<div>Getting you there...</div>}>
                 <Routes>
                     <Route exact path={publicLinks.Landing} element={<Landing />} />
+                    <Route path={publicLinks.Error} element={<Error />} />
                 </Routes>
             </Suspense>
         </Router>
