@@ -38,15 +38,17 @@
     width: 100%;
 }
 @media screen and (max-width: 960px) {
+    .landing-page .hero-right{
+        width: 100%
+    }
     .landing-page  .hero-left{
         width: 100%;
         padding: 1.5rem;
     }
-    .landing-page .hero-right{
-        display: none;
-    }
     .landing-page .hero-section{
         padding: 3rem;
+        display: flex;
+        flex-direction: column;
     }
     .landing-page .hero-title{
         font-size: 2rem;
