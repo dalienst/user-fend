@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react';
 import { Outlet, useNavigate } from 'react-router-dom';
@@ -18,7 +19,7 @@ function PersistLogin() {
         
       } catch (error) {
         toast.error("Please Login again!")
-        navigate(publicLinks.Login, {replace: true});
+        // navigate(publicLinks.Login, {replace: true});
       } finally {
         // eslint-disable-next-line no-unused-expressions
         setIsLoading(false);
