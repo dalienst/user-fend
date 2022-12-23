@@ -1,17 +1,18 @@
-:root{
-  --primary: #FD7900;
-  --primary-darker: #cc6302;
-  --background: #000000; 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,400&display=swap");
+:root {
+  --primary: #000000;
+  --primary-darker: rgb(10, 25, 41);
+  --background: #ffffff;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
 }
-body{
+body {
   background-color: var(--background);
+  font-family: "Poppins", sans-serif;
 }
 .btn {
   padding: 0.8rem 1rem;
@@ -25,7 +26,7 @@ body{
 
 .btn-primary {
   background-color: var(--primary);
-  color: #FFFFFF;
+  color: #ffffff;
   border: 1px solid var(--primary);
 }
 .btn-outline {
@@ -35,20 +36,18 @@ body{
   border: 2px solid var(--primary);
   transition: all 0.3s ease-out;
 }
-.btn-outline:hover{
+.btn-outline:hover {
   transition: all 0.3s ease-out;
   background: var(--primary);
-  color: #FFFFFF;
+  color: #ffffff;
   transition: 250ms;
 }
-.btn-primary:hover{
+.btn-primary:hover {
   background-color: var(--primary-darker);
   border: 1px solid var(--primary-darker);
 }
-.form-error{
-  color: red;
-}
-.form-success{
+
+.form-success {
   width: 100%;
   margin: 10px;
   color: green;
@@ -57,36 +56,244 @@ body{
   align-items: center;
   background-color: rgba(35, 253, 0, 0.14);
 }
-.form-success p{
+.form-success p {
   width: 100%;
 }
-.form-success .close-btn-icon{
+.form-success .close-btn-icon {
   cursor: pointer;
 }
-.form-success .close-btn-icon i{
+.form-success .close-btn-icon i {
   font-size: 20px;
   padding-right: 10px;
   color: green;
 }
 button:disabled,
-button[disabled]{
+button[disabled] {
   border: 1px solid #999999;
   background-color: #cccccc;
   color: #666666;
 }
 button:disabled:hover,
-button[disabled]:hover{
+button[disabled]:hover {
   border: 1px solid #999999;
   background-color: #cccccc;
   color: #666666;
   cursor: not-allowed;
 }
-.loading{
+.loading {
   width: 100%;
   text-align: center;
   display: block;
 }
-.loading img{
+.loading img {
   width: 50px;
   height: 50px;
+}
+
+.input-redirect {
+  color: rgb(10, 25, 41);
+  cursor: pointer;
+  font-style: italic;
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  margin: 0.8rem 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #eeeeee;
+}
+
+.input-error {
+  color: red;
+  font-size: 13px;
+  font-style: italic;
+}
+
+.main-screen .right-content,
+.left-content {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.main-screen {
+  overflow-y: auto;
+}
+
+.main-screen .left-content {
+  left: 0;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  /* background-image: url("./images/signup.svg"); */
+  padding: 1em;
+}
+
+.main-screen .right-content {
+  right: 0;
+  background-color: #ffffff;
+}
+
+/* Form */
+.reg-form {
+  margin: 3em;
+}
+
+.form-title {
+  text-align: center;
+}
+
+@media screen and (max-width: 960px) {
+  .main-screen .right-content {
+    width: 100%;
+    margin: auto;
+  }
+  .main-screen .left-content {
+    width: 100%;
+    padding: 1.5rem;
+  }
+  .main-screen .form-title {
+    font-size: 2rem;
+  }
+  .reg-page .main-screen {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+  }
+}
+.logo {
+  color: var(--primary);
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* Sidenav and Main content */
+.main {
+  display: flex;
+  height: 100vh;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.page-nav {
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+  box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  margin-bottom: 5px;
+  text-align: center;
+  align-content: center;
+  padding: 1rem;
+}
+.nav-button {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  background-color: rgb(10, 25, 41);
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+.home {
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+/* End of Main */
+
+/* Dashboard */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 0 20px;
+}
+
+@media screen and (max-width: 960px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+  .user-edit {
+    display: flex;
+    justify-content: space-between;
+  }
+  .card {
+    width: 100%;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px;
+  height: auto;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+}
+
+/* .card-body {
+  display: flex;
+  flex-direction: column;
+} */
+.card-text {
+  font-size: 13px;
+  margin-bottom: 1em;
+}
+.delete-form-btn {
+  border-radius: 4px;
+  background-color: red;
+  color: white;
+  text-transform: capitalize;
+  padding: 5px;
+  width: 100%;
+  margin-top: 2px;
+  cursor: pointer;
+  margin-top: 0.5em;
+}
+
+.user-edit {
+  display: flex;
+  justify-content: space-between;
+}
+
+.welcome-msg {
+  padding: 16px;
+}
+
+.delete-nav-button {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: bold;
+  background-color: red;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: none;
 }

@@ -1,6 +1,8 @@
 import Navbar from "../Navbar/Navbar";
 import './Landing.css'
 import heroImg from '../../images/profile.svg'
+import { Link } from "react-router-dom";
+import { publicLinks } from "../../constants/links";
 
 const Landing = () => {
     return ( 
@@ -13,7 +15,7 @@ const Landing = () => {
                 <div className="hero-left">
                     <h1 className="hero-title">Easily create, view and edit your profile</h1>
                     <p className="hero-description">Elephant Room is a profile tool that allows you to easily create and edit your profile to one that suits you perfectly.</p>
-                    <button className="btn btn-primary">Get Started</button>
+                    <Link to={publicLinks.Login} className="btn btn-primary">Get Started</Link>
                 </div>
             </div>
         </div>

@@ -17,6 +17,7 @@
  .split-screen .right {
     right: 0;
     background-color: #FFFFFF;
+    
  }
  .split-screen .logo-split-screen{
      padding-left: 1rem;
@@ -39,6 +40,11 @@
     text-align: center;
     margin: 1rem;
 }
+
+.form-title {
+    margin-top: 1em;
+}
+
 input, select{
     width: 100%;
     padding: 0.8rem 1rem;

@@ -7,6 +7,7 @@ const publicLinks = {
 
 const privateLinks = {
     Dashboard: '/dashboard',
+    Profile: '/profile',
     UpdateProfile: '/profile/edit'
 };
 
