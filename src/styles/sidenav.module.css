@@ -4,7 +4,7 @@
     height: 100vh;
     background-color: #000;
     padding-top: 28px;
-    overflow:  auto;
+    overflow:  hidden;
     flex-shrink: 0;
 }
 .sidenavClosed {
