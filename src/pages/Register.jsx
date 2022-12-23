@@ -91,7 +91,7 @@ export default function Register() {
 
                 <p className="input-link">
                   <span>Already have an account?</span>{" "}
-                  <Link to="/" className="input-redirect">
+                  <Link to={publicLinks.Login} className="input-redirect">
                     Sign in
                   </Link>
                 </p>
