@@ -182,6 +182,7 @@ button[disabled]:hover {
 .main {
   display: flex;
   height: 100vh;
+  overflow-y: hidden;
 }
 .content {
   display: flex;
